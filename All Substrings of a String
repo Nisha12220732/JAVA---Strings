@@ -1,0 +1,24 @@
+package Strings;
+import java.util.*;
+public class String5prac {
+
+    public static void allsubstrings(String str){
+        int count = 0;
+        System.out.print("All the substrings are: ");
+        for(int i = 0;i<str.length();i++){
+            for(int j =i+1;j<=str.length();j++){
+                System.out.print(str.substring(i,j) + " ");
+                count++;
+            }
+        }
+        System.out.println();
+        System.out.println("Total no of substrings of the given string " + str +" is " + count);
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        System.out.println(str);
+        allsubstrings(str);
+
+    }
+}
