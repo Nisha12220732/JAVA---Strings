@@ -1,0 +1,40 @@
+package Strings;
+import java.util.*;
+public class String5prac {
+//Inbuilt functions of String Builder class mutate the StringBuilder permanently.
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        StringBuilder str = new StringBuilder("HelloIamaString");
+
+        //Here we cannot concatinate by just using plus sign, We need an append function
+        str.append("Builder");
+
+        //The main characterstic of String Builder is its mutability which makes it more useful as compared to Strings
+        str.setCharAt(3,'a');
+        System.out.println(str);
+
+        str.setCharAt(5,'A');
+        System.out.println(str);
+
+        //Inserting an element or a string in StringBuilder
+        str.insert(4,"abcfe");
+        System.out.println(str);
+
+        //deleting an element in StringBuilder
+        str.deleteCharAt(4);
+        System.out.println(str);
+
+        //Converting a string to String Builder
+        String str2 = "Heyyy!!!";
+        StringBuilder str3 = new StringBuilder(str2);
+        System.out.println(str3);
+
+        //Reversing a Stringbuilder
+        str.reverse();
+        System.out.println(str);
+
+        //Deleting a range from string
+        str.delete(2,8);
+        System.out.println(str);
+    }
+}
