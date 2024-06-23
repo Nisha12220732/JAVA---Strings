@@ -1,0 +1,58 @@
+package Strings;
+import java.util.*;
+public class String5prac {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        String str = "Hello World";
+        String str2 = "Hell ";
+        System.out.println(str);
+
+System.out.println("Finding the length of string");
+        System.out.println(str.length());
+
+System.out.println("Finding the char at an index");
+        System.out.println(str.charAt(6));
+
+System.out.println("Finding the index of first occurance of a given char");
+        System.out.println(str.indexOf('e'));
+
+System.out.println("Finding the index of first occurance of a given string");
+        System.out.println(str.indexOf("ah"));
+
+System.out.println("For comparing 2 strings");
+        System.out.println(str.compareTo(str));
+
+System.out.println("Checks if a string contains a given string");
+        System.out.println(str.contains("Wall"));
+
+System.out.println("Checks if a string starts with a certain Character or string");
+        System.out.println(str.startsWith("Coll"));
+
+System.out.println("Checks if a string starts with a certain Character or string");
+        System.out.println(str.endsWith("lah"));
+
+System.out.println("Converts the a string to LowerCase (It do not change the original string)");
+        System.out.println(str.toLowerCase());
+        System.out.println(str);
+
+System.out.println("Converts the a string to LowerCase (It do not change the original string)");
+        System.out.println(str.toUpperCase());
+        System.out.println(str);
+
+System.out.println("Adding 2 strings to by a plus sign");
+        System.out.println("Hell " + str);
+
+System.out.println("Adding 2 string by using concat function (do not change the original string)");
+        System.out.println(str2.concat(str));
+        System.out.println(str);
+
+System.out.println("For extracting a substring by giving start and end index from a string");
+                System.out.println(str2.substring(0,3));
+
+System.out.println("For extracting a substring by giving start index from a string");
+        System.out.println(str.substring(5));
+
+    }
+}
