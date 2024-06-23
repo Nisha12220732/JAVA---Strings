@@ -1,0 +1,28 @@
+package Strings;
+import java.util.*;
+public class String5prac {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        StringBuilder str2 = new StringBuilder(str);
+        System.out.println("Printing all the substrings of the string");
+        int count = 0;
+        for(int i =0;i<=str2.length();i++){
+            for(int j =i +1;j<=str2.length();j++){
+                StringBuilder str3 = new StringBuilder(str2.substring(i,j));
+                System.out.print(str3 + " is a palindromic string:   " );
+                String str4 = str2.substring(i,j);
+                str3.reverse();
+                if(str4.equals(str3.toString())){
+                    count++;
+                    System.out.println("True");
+                }
+                else{
+                    System.out.println("False");
+                }
+
+            }
+        }
+        System.out.println("Total no of palindromic strings are: " + count);
+    }
+}
