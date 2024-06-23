@@ -1,0 +1,23 @@
+package Strings;
+import java.util.*;
+public class String5prac {
+//Inbuilt functions of String Builder class mutate the StringBuilder permanently.
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        String str = sc.nextLine();
+        String newstr = "";
+        for(int i =0;i<str.length();i++){
+            char ch = str.charAt(i);
+            if(Character.isUpperCase(ch)){
+                System.out.print(Character.toLowerCase(ch));
+                newstr += Character.toLowerCase(ch);
+            }
+            else{
+                System.out.print(Character.toUpperCase(ch));
+                newstr += Character.toUpperCase(ch);
+            }
+        }
+        System.out.println();
+        System.out.println(newstr);
+    }
+}
