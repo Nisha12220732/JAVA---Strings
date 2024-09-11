@@ -1,0 +1,19 @@
+package ExternalPractice;
+
+import java.util.Scanner;
+
+public class ChangeVowel_to_aestric_at_Even_places_Part1 {
+
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            StringBuilder str = new StringBuilder(sc.next());
+            for(int i =1 ;i<str.length();i=i+2){
+                if(str.charAt(i) == 'a' || str.charAt(i) == 'e' ||str.charAt(i) == 'i' ||str.charAt(i) == 'o' ||str.charAt(i) == 'u' || str.charAt(i) == 'A' || str.charAt(i) == 'E' || str.charAt(i) == 'I' ||str.charAt(i) == 'O' ||str.charAt(i) == 'U'){
+                    str.replace(i,i+1,"*");
+                }
+            }
+            System.out.println(str);
+        }
+    }
+
+
