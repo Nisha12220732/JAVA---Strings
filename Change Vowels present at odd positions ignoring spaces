@@ -1,0 +1,24 @@
+package ExternalPractice;
+
+import java.util.Scanner;
+
+public class Change_Vowel_To_Aestric_At_Even_Places_Not_count_spaces {
+
+        public static void main(String[] args) {
+            Scanner sc = new Scanner(System.in);
+            StringBuilder str = new StringBuilder(sc.nextLine());
+            int count = -1;
+            for(int i =1 ;i<str.length();i++){
+                count++;
+                if( str.charAt(i) == ' '){
+                    count--;
+                }
+                else if(count % 2 == 0) {
+                    if (str.charAt(i) == 'a' || str.charAt(i) == 'e' || str.charAt(i) == 'i' || str.charAt(i) == 'o' || str.charAt(i) == 'u' || str.charAt(i) == 'A' || str.charAt(i) == 'E' || str.charAt(i) == 'I' || str.charAt(i) == 'O' || str.charAt(i) == 'U') {
+                        str.replace(i, i + 1, "*");
+                    }
+                }
+            }
+            System.out.println(str);
+        }
+}
