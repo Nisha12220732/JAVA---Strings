@@ -1,0 +1,44 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class palindrome2697approch2 {
+        public static void main(String[] args) {
+
+            Scanner sc = new Scanner(System.in);
+            String str = sc.next();
+            int n = str.length();
+            String str1 ="",str2 = "";
+            String r = "";
+            if(n%2 == 0){
+                str1 = str.substring(0,n/2);
+                str2 = str.substring(n/2,n);
+            }
+            else{
+                str1 = str.substring(0,n/2);
+                str2 = str.substring(n/2+1,n);
+                r = str.charAt(n/2) + "";
+            }
+
+
+            char[] ca1 = str1.toCharArray();
+            char[] ca2 = str2.toCharArray();
+            int diff = 0;
+            for(int i = 0;i<ca1.length;i++){
+                if(ca1[i] != ca2[ca2.length - i -1]){
+                    char m =(char)Math.min((int)ca1[i],(int)ca2[ca2.length - i -1]);
+                    ca2[ca2.length - i - 1] = m;
+                    ca1[i] = m;
+                    diff++;
+                }
+            }
+            String str3 = new String(ca1);
+            String str4 = new String(ca2);
+
+            System.out.println("Least number of steps to convert this string to palindrome is: " + diff);
+            System.out.println("Palindromic string is: ");
+            System.out.println(str3 + r + str4);
+        }
+    }
+
+
