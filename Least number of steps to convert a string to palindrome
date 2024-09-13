@@ -1,0 +1,32 @@
+package Arrays;
+
+import java.util.Scanner;
+
+public class palindrome2697 {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+        String str = sc.next();
+        int n = str.length();
+        String str1 ="",str2 = "";
+        if(n%2 == 0){
+            str1 = str.substring(0,n/2);
+            str2 = str.substring(n/2,n);
+        }
+        else{
+            str1 = str.substring(0,n/2);
+            str2 = str.substring(n/2+1,n);
+        }
+
+
+        char[] ca1 = str1.toCharArray();
+        char[] ca2 = str2.toCharArray();
+        int diff = 0;
+        for(int i = 0;i<ca1.length;i++){
+            if(ca1[i] != ca2[ca2.length - i -1]){
+                diff++;
+            }
+        }
+        System.out.println("Least number of steps to convert the given string to palindrome is " + diff);
+    }
+}
